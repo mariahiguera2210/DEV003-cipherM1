@@ -7,29 +7,28 @@
   </head>
   <body>
     <div id="root">
-      <h1>Cifrado y descifrado de mensajes</h1>
-      <p>Bienvendio a nuetra página donde podras cifrar y descifrar tus mensjes</p>
+      <h1>Encriptar mensajes</h1>
+    
  
 
-      <form action="#">
-      <p>Acontinuación escoge una de las siguientes opciones</p>
-      <input type="radio" id="cifrar" name="mensaje" value="Cifrar">
-      <label for="cifrar">Cifrar mensaje</label><br>
-      <input type="radio" id="descifrar" name="mensaje" value="Descifrar">
-      <label for="descifrar">Descifrar Mensaje</label><br><br>
-
-      <input type="button" value="Aceptar" onclick="MiOpcion()">
+      <form >
+      <p>Ingresa en el siguiente cuadro tú mensaje en Mayúscula:</p>
+      <textarea  id="texto" onkeypress="return (event.charCode >= 65 && event.charCode <= 90)"></textarea><br> 
       
-      <p>Ingresa acá tu mensaje: </p>
+      
+      <p>A continuación escoge una de las siguientes opciones</p>
+      <input type="radio" id="cifrar" name="mensaje" value="Encriptar">
+      <label for="cifrar">Encriptar Mensaje</label><br>
+      <input type="radio" id="descifrar" name="mensaje" value="Desencriptar">
+      <label for="descifrar">Desencriptar Mensaje</label><br><br>
 
-      <p><textarea name="mensaje" rows="15" cols="60"></textarea></p>
-      <input type="button" value="Enviar" onclick="MiMensaje()">
-
+      <input type="button" value="Enviar" onclick="miMensaje()"></input>
       </form>
-
-
+      
+      
     </div>
-    <script src="index.js" type="module"></script>
+
+    <script src="./index.js" ></script>
   </body>
 </html>
 
