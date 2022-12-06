@@ -9,25 +9,27 @@
     <div id="root">
       <h1>Encriptar mensajes</h1>
     
-      <form >
+      <form>
       <p>Ingresa en el siguiente cuadro tú mensaje en Mayúscula:</p>
-      <textarea  id="texto" onkeypress="return (event.charCode >= 65 && event.charCode <= 90)"></textarea><br> 
+      <textarea  id="texto" ></textarea>
       
       <p>Escoge el numero de desplazamientos: </p>
-      <input type="number" id="ndesplazamiento" name="desplazamiento" min="1" max="9">
-      <p>A continuación escoge una de las siguientes opciones</p>
+      <input type="number" id="ndesplazamiento" name="desplazamiento" min="1" max="100">
+      
+      <p>A continuación selecciona una de las siguientes opciones</p>
       <input type="radio" id="cifrar" name="mensaje" value="Encriptar">
       <label for="cifrar">Encriptar Mensaje</label><br>
       <input type="radio" id="descifrar" name="mensaje" value="Desencriptar">
       <label for="descifrar">Desencriptar Mensaje</label><br><br>
 
-      <input type="button" value="Enviar" id="enviar"></input>
+      <input type="button" value="Enviar" id="enviar"><br><br>
+      <textarea  id="texto2" ></textarea>
       </form>
       
       
     </div>
 
-    <script src="index.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
 

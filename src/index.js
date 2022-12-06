@@ -1,27 +1,24 @@
-import cipher from './cipher.js';
-
-console.log(cipher);
-
+import cipher from "./cipher.js";
 
 function miMensaje() {
+  const mensaje = document.getElementById("texto").value; //llama el mensaje de textarea
+  const seleccionado = document.querySelector(
+    'input[name="mensaje"]:checked'
+  ).value;
+  const desplazamientos = parseInt(document.getElementById("ndesplazamiento").value);
+  //console.log(mensaje, seleccionado, desplazamientos);
+  const mensaje2 = document.getElementById("texto2");
+  const mensajeEncriptado = cipher.encode(desplazamientos, mensaje);
+  const mensajeDesencriptado = cipher.decode(desplazamientos, mensaje);
 
-    let mensaje = document.getElementById("texto").value
-    let seleccionado = document.querySelector('input[name="mensaje"]:checked').value;
-    let respuesta;
-    let desplazamientos= document.getElementById('ndesplazamiento').value;
-    console.log(mensaje, seleccionado, desplazamientos)
+  if (seleccionado === "Encriptar") {
+    mensaje2.value = mensajeEncriptado;
+  } else if (seleccionado === "Desencriptar")
+    mensaje2.value = mensajeDesencriptado;
+  else mensaje2.value = "Revisa tu mensaje, algo anda mal";
 
-    if(seleccionado == "Encriptar" ) 
-        respuesta = "formula para encriptar el mensaje"
-
-    else if(seleccionado == "Desencriptar")
-        respuesta = "formula para desencriptar el mensaje"
-
-
-    
-
+  
 }
 
-
-let boton= document.getElementById('enviar');
-boton.addEventListener("click",miMensaje);
+const boton = document.getElementById("enviar"); // se crea la variable para el boton
+boton.addEventListener("click", miMensaje); // es para realizar un evento cuando se hace click
