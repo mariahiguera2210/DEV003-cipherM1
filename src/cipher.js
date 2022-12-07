@@ -1,18 +1,22 @@
 const cipher = {
   encode: (desplazamientos, mensaje) => {
+    
+    if(typeof desplazamientos !== "number" || typeof mensaje !== 'string'){
+      throw (TypeError());}
+    
     let solucion="";
-    let posicionCesar;
-
+    let posicionCesar; 
     for (let i = 0; i < mensaje.length; i++) {
       let char ;
       const posicionAscci = mensaje.charCodeAt(i); //charcodeat, me da la posicion de la letra en el alfabeto ascci
       //String.fromCharcode, convierte los numeros en String.
-      console.log(posicionAscci);
 
       if (posicionAscci >= 65 && posicionAscci <= 90) {
         posicionCesar = (((posicionAscci - 65 + desplazamientos) % 26) + 65);
-        console.log("posicionCesar: ", posicionCesar);
         char = String.fromCharCode(posicionCesar);
+      }
+      if(posicionAscci == 32){ 
+        char = " ";
       }
 
       solucion = solucion + char;
@@ -22,7 +26,10 @@ const cipher = {
   },
 
   decode: (desplazamientos, mensaje) => {
-    let solucion;
+    let solucion="";
+
+    if(typeof desplazamientos !== "number" || typeof mensaje !== 'string'){
+       throw (TypeError());}
 
     for (let i = 0; i < mensaje.length; i++) {
       let char = mensaje[i];
@@ -32,6 +39,9 @@ const cipher = {
         char = String.fromCharCode(
           ((posicionAscci - 90 - desplazamientos) % 26) + 90
         );
+      }
+      if(posicionAscci == 32){ 
+        char = " ";
       }
 
       solucion = solucion + char;
