@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url("./imagenes/corazon.jpg");
+  background-size: cover;
+}
+
+#root {
+  text-align: center;
+  padding-top: 16vh;
+}
+
+.titulo {
+  padding-bottom: 5vh;
+  font-family: Bradley Hand, cursive;
+}
+
+.parrafo {
+  padding-bottom: 3vh;
+  font-family: Bradley Hand, cursive;
+}
+
+.textarea {
+  height: 6em;
+  width: 400px;
+}

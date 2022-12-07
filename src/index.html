@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root">
-      <h1>Encriptar mensajes</h1>
-    
-      <form>
-      <p>Ingresa en el siguiente cuadro tú mensaje:</p>
-      <textarea  id="texto" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || 
-      (event.charCode >= 97 && event.charCode <= 122) ||event.charCode == 32"></textarea>
-      
-      <p>Escoge el numero de desplazamientos: </p>
-      <input type="number" id="ndesplazamiento" name="desplazamiento" min="1" max="100">
-      
-      <p>A continuación selecciona una de las siguientes opciones</p>
-      <input type="radio" id="cifrar" name="mensaje" value="Encriptar">
-      <label for="cifrar">Encriptar Mensaje</label><br>
-      <input type="radio" id="descifrar" name="mensaje" value="Desencriptar">
-      <label for="descifrar">Desencriptar Mensaje</label><br><br>
+      <h1 class="titulo">Encriptar mensajes</h1>
 
-      <input type="button" value="Enviar" id="enviar"><br><br>
-      <textarea  id="texto2" readonly="readonly"></textarea><br><br>
-      <input type="reset" value="Limpiar" id="limpiar">
+      <form>
+        <p class="parrafo">Ingresa en el siguiente cuadro tú mensaje:</p>
+        <textarea class="textarea"
+          id="texto"
+          onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || 
+      (event.charCode >= 97 && event.charCode <= 122) ||event.charCode == 32"
+        ></textarea>
+
+        <p class="parrafo">Escoge el numero de desplazamientos:</p>
+        <input
+          type="number"
+          id="ndesplazamiento"
+          name="desplazamiento"
+          min="1"
+          max="100"
+        />
+
+        <p class="parrafo">A continuación selecciona una de las siguientes opciones</p>
+        <input type="radio" id="cifrar" name="mensaje" value="Encriptar" />
+        <label for="cifrar">Encriptar Mensaje</label><br />
+        <input
+          type="radio"
+          id="descifrar"
+          name="mensaje"
+          value="Desencriptar"
+        />
+        <label for="descifrar">Desencriptar Mensaje</label><br /><br />
+
+        <input type="button" value="Enviar" id="enviar" /><br /><br />
+        <textarea class="textarea" id="texto2" readonly="readonly"></textarea><br /><br />
+        <input type="reset" value="Limpiar" id="limpiar" />
       </form>
-      
-      
     </div>
 
     <script src="./index.js" type="module"></script>
   </body>
 </html>
-
-
