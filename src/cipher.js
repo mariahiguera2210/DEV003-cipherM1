@@ -6,6 +6,7 @@ const cipher = {
 
     let solucion = "";
     let posicionCesar;
+
     for (let i = 0; i < mensaje.length; i++) {
       //i++ = i+1
       let char;
@@ -15,7 +16,7 @@ const cipher = {
       if (posicionAscci >= 65 && posicionAscci <= 90) {
         posicionCesar = ((posicionAscci - 65 + desplazamientos) % 26) + 65;
         char = String.fromCharCode(posicionCesar);
-      }
+      } 
       if (posicionAscci === 32) {
         char = " ";
       }
