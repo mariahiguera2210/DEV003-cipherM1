@@ -1,7 +1,7 @@
 import cipher from "./cipher.js";
 
 function miMensaje() {
-  const mensaje = document.getElementById("texto").value.toUpperCase(); //llama el mensaje de textarea
+  const mensaje = document.getElementById("texto").value; //llama el mensaje de textarea
 
   const seleccionado = document.querySelector(
     'input[name="mensaje"]:checked'
@@ -34,7 +34,6 @@ function mayus() {
 }
 
 const limpiarForm= document.getElementById("limpiar");
-limpiarForm.addEventListener("click", miMensaje).reset();
 
 
 // window.addEventListener('load',mayus,true)
